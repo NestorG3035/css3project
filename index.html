@@ -5,44 +5,69 @@
   <meta charset="UTF-8">
   <title>Flashcards</title>
   <style>
-  #lasagna{
-background-color:linear-gradient;
-  }
+    .flashcards {
+      width: 20%;
+      height: 125px;
+      background-color: white;
+      border-radius: 25px;
+      border: 2px solid black;
+      margin:20px;
+    }
+
+    #lasagna {
+      background-color: linear-gradient;
+    }
+
     #flashcard1 {
 
       position: absolute;
-      left: 10%;
-     transition:2s;
-    
-   
+      left: 10%;/*The location for the second flashcard 10% left across the screen */
+      transition: width 2s ease-out ;/*width increase for 2 seconds. Follows the #flashcard1:hover function*/
       
+
+
+
+    }
+
+    #flashcard1:hover {
+      width: 40%;
+    
     }
 
     #flashcard2 {
 
       position: absolute;
-      left: 40%;
+      left: 40%;/*The location for the second flashcard 40% left across the screen */
+    
+      transition:2s ease-out;/*width increase for 2 seconds. Follows the #flashcard2:hover function*/
 
+    }
+
+    #flashcard2:hover {
+      width: 40%;
+     
     }
 
     #flashcard3 {
-      
-      position: absolute;
 
-      left: 70%;
+      position: absolute;
+      left: 70%;/*The location for the third flashcard 70% left across the screen */
+     transition:2s ease-out;/*width increase for 2 seconds. Follows the #flashcard3:hover function*/
+      
     }
- #flashcard1:hover{
-      width:40%;
-      bottom:200px;
+
+    #flashcard3:hover {
+      width: 40%;
+      
     }
   </style>
 </head>
 
 <body>
-<div id="lasagna">
-  <div class=flashcards, id="flashcard1"></div>
-  <div class=flashcards, id="flashcard2"></div>
-  <div class=flashcards, id="flashcard3"></div>
+  <div id="lasagna">
+    <div class="flashcards" , id="flashcard1"></div>
+    <div class="flashcards" , id="flashcard2"></div>
+    <div class="flashcards" , id="flashcard3"></div>
   </div>
 </body>
 
