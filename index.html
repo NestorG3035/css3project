@@ -5,66 +5,153 @@
   <meta charset="UTF-8">
   <title>Flashcards</title>
   <style>
+    html {
+     
+            background-image: radial-gradient(circle, black , white);
+
+    }
+
     .flashcards {
       width: 20%;
-      height: 125px;
+      height: 305px;
       background-color: white;
       border-radius: 25px;
       border: 2px solid black;
-      margin:20px;
+      margin: 20px;
+      bottom:20%;
+      /*Default attributes for all flashcards*/
     }
 
-    #lasagna {
-      background-color: linear-gradient;
+    .lasagna {
+    
+      width: 100%;
+      height: 100%;
+
+
     }
 
     #flashcard1 {
 
       position: absolute;
-      left: 10%;/*The location for the second flashcard 10% left across the screen */
-      transition: width 2s ease-out ;/*width increase for 2 seconds. Follows the #flashcard1:hover function*/
-      
-
-
-
+      left: 10%;
+     
+      background-color: #C7000F;
+      box-shadow: 10px 10px 5px grey;
+      /*shadow*/
+      transition: .5s ease-out;
+      animation: flashcard1 3s ease-in-out .5s;
+      /*Allows Flashcard 1 to slide from left to right in the beginning smoothly*/
+      /*The location for the second flashcard 10% left across the screen */
+      /*width increase for .5 seconds smoothly. Follows the #flashcard1:hover function*/
     }
 
-    #flashcard1:hover {
-      width: 40%;
-    
-    }
+
 
     #flashcard2 {
 
       position: absolute;
-      left: 40%;/*The location for the second flashcard 40% left across the screen */
+      left: 40%;
     
-      transition:2s ease-out;/*width increase for 2 seconds. Follows the #flashcard2:hover function*/
-
+      background-color: #EBFB5B;
+      box-shadow: 10px 10px 5px grey;
+      /*shadow*/
+      transition: .5s ease-out;
+      animation: flashcard2 2.5s ease-in-out .5s;
+      /*Allows Flashcard 2 to slide from left to right in the beginning smoothly*/
+      /*The location for the second flashcard 40% left across the screen */
+      /*width increase for .5 seconds smoothly. Follows the #flashcard2:hover function*/
     }
 
-    #flashcard2:hover {
-      width: 40%;
-     
-    }
+
 
     #flashcard3 {
 
       position: absolute;
-      left: 70%;/*The location for the third flashcard 70% left across the screen */
-     transition:2s ease-out;/*width increase for 2 seconds. Follows the #flashcard3:hover function*/
-      
+      left: 70%;
+      background-color: green;
+      box-shadow: 10px 10px 5px grey;
+      /*shadow*/
+      transition: .5s ease-out;
+      animation: flashcard3 2s ease-in-out .5s;
+      /*The location for the third flashcard 70% left across the screen */
+      /*width increase for .5 seconds smoothly. Follows the #flashcard3:hover function*/
+    }
+
+    #flashcard1:hover {
+      /*flashcard1  increases width when hovered over and it moves 5% back from its original position in order to stay centered and the color gets lighter*/
+      background-color: red;
+      width: 30%;
+      left: 5%;
+      bottom: 35%;
+      height: 175px;
+
+
+    }
+
+    #flashcard2:hover {
+      /*flashcard2  increases width when hovered over and it moves 5% back from its original position in order to stay centered and the color gets lighter*/
+      background-color: yellow;
+      width: 30%;
+      left: 35%;
+      bottom: 35%;
+      height: 175px;
+
     }
 
     #flashcard3:hover {
-      width: 40%;
-      
+      background-color: #32CD32;
+      width: 30%;
+      left: 65%;
+      bottom: 35%;
+      height: 175px;
+      background-color: #32CD32;
+      /*flashcard3  increases width when hovered and it moves 5% back from its original position in order to stay centered and the color gets lighter*/
+    }
+
+    @keyframes flashcard1 {
+
+      0% {
+        left: 0%;
+      }
+      50% {
+        left: 10%;
+      }
+      100% {
+        transform: rotateY(360deg);
+      }
+      /*Moves red from left to right and rotates afterwards*/
+    }
+
+    @keyframes flashcard2 {
+      0% {
+        left: 0%;
+      }
+      50% {
+        left: 40%;
+      }
+      100% {
+        transform: rotateY(360deg);
+      }
+      /*moves yellow from left to right and rotates sideways (rotateY) afterwars*/
+    }
+
+    @keyframes flashcard3 {
+      0% {
+        left: 0%;
+      }
+      50% {
+        left: 70%;
+      }
+      100% {
+        transform: rotateY(360deg);
+      }
+      /*moves green from left to right and rotates.*/
     }
   </style>
 </head>
 
 <body>
-  <div id="lasagna">
+  <div class="lasagna">
     <div class="flashcards" , id="flashcard1"></div>
     <div class="flashcards" , id="flashcard2"></div>
     <div class="flashcards" , id="flashcard3"></div>
